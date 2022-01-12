@@ -1,11 +1,11 @@
 import React from "react"
 import TableEntry from "./TableEntry"
 
-const BookingsTable=({bookings,removeBooking}) => {
+const BookingsTable=({bookings,removeBooking, changeBooking}) => {
 
 
     const bookingsItems = bookings.map((booking) => {
-        return <TableEntry booking={booking} removeBooking={removeBooking} key={booking._id}/>
+        return <TableEntry booking={booking} removeBooking={removeBooking} changeBooking={changeBooking} key={booking._id}/>
     })
 
     return(

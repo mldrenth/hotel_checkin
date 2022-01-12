@@ -26,11 +26,17 @@ const BookingsContainer=() => {
         setBookings(temp)
     }
 
+    const changeBooking = (newBooking) => {
+        const temp = [...bookings]
+        const idToChange = temp.findIndex(booking => booking._id === newBooking._id)
+        temp[idToChange] = newBooking
+    }
+
 
     return(
         <div>
             <BookingsForm addBooking={addBooking}/>
-            <BookingsTable bookings={bookings} removeBooking={removeBooking}/>
+            <BookingsTable bookings={bookings} removeBooking={removeBooking} changeBooking={changeBooking}/>
         </div>
     )
 }

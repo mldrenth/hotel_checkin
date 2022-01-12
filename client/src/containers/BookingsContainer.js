@@ -11,7 +11,7 @@ const BookingsContainer=() => {
         getBookings().then((allBookings) => {
             setBookings(allBookings)
         })
-    }, [])
+    }, [bookings])
 
     const addBooking = (booking) => {
         const temp = bookings.map(b => b)
